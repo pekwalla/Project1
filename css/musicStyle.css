@@ -1,0 +1,124 @@
+
+
+/*--------------Jumbotron-------------*/
+
+
+.lead{
+    font-family: "avenir";
+    color:#16A2B8;
+    font-weight: 500;
+}
+
+.jumbotron{
+    background-color: #2A3852;
+    text-align: center;
+}
+
+/*--------------Top 5 on the Billboard Table-------------*/
+.topFive{
+    width: 100%;
+    background-color: #2A3852;
+    color:#38C790;
+    font-size: 24px;
+    font-family: "avenir";
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 70px;
+}
+
+.align-middle{
+    font-size: 16px;
+    font-family: "avenir";
+    font-weight: 500;
+}
+
+
+/*--------------Glyphcon Styles-------------*/
+
+.glyphicon-play-circle{
+    width: 10px;
+    height: 10px;
+    margin-right: 7px;
+    text-align: center;
+    color: #38C790;
+    font-size: 24px;
+}
+
+.glyphicon-play-circle:hover{
+    color:rgb(48, 170, 123);
+}
+
+
+.glyphicon-heart{
+    width: 10px;
+    height: 10px;
+    margin-right: 7px;
+    text-align: center;
+    color: #16A2B8;
+    font-size: 24px;
+}
+
+.glyphicon-heart:hover{
+    color: #04899B;
+}
+
+
+/*--------------Search for Songs-------------*/
+
+h3{
+    width: 100%;
+    background-color: #2A3852;
+    color:#38C790;
+    font-size: 24px;
+    font-family: "avenir";
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.input-group{
+    margin-top: 30px;
+}
+
+.search-button{
+    background-color: #38C790;
+}
+
+#buttonHover:hover{
+    background-color: rgb(48, 170, 123);
+}
+
+/*--------------Song Returned-------------*/
+
+.card-header{
+    width: 100%;
+    background-color: #2A3852;
+    color:#38C790;
+    font-size: 24px;
+    font-family: "avenir";
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 0px;
+}
+
+#cardStyle{
+    margin-top: 70px;
+}
+
+.card-title{
+    font-size: 16px;
+    font-family: "avenir";
+    font-weight: 500;
+}
+
+#heartStyle{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
