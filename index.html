@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Music Match</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/musicStyle.css">
+
+</head>
+
+
+<body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <img src="images/greenLogo.png" width=300px alt="Logo">
+            <p class="lead">Search a song title or Artist to find a song and its matching lyrics!</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Search for Songs -->
+        <h3>Search for songs</h3>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for song name or artist.">
+            <span class="input-group-btn">
+                <button id="buttonHover" class="btn" style="background-color:#38C790" type="button" id="buttonHover">Search</button>
+            </span>
+        </div>
+
+        <!-- Song Return -->
+        <div id="cardStyle" class="card">
+            <h5 class="card-header">Song Title</h5>
+            <div class="card-body">
+                <h5 class="card-title">Artist
+                    <button type="button" class="btn">
+                        <span class="glyphicon glyphicon-play-circle"></span>
+                    </button>
+                </h5>
+                <div class="card">
+                    <div class="card-body">
+                        <div data-spy="scroll" data-target="#list-example" data-offset="0">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, maxime non dolore rem
+                            eum nisi magni laborum aliquid quam dolor beatae rerum nam voluptatum accusantium eveniet
+                            quaerat cum laudantium facilis.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top 5 Songs -->
+        <table class="table table-striped-border">
+
+            <thead>
+                <tr>
+                    <div class="topFive" class="col-md-12">Top 5 Songs</div>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="col" class="align-middle">1</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                        </button>
+                    </th>
+                    <th scope="col" class="align-middle">Song Title</th>
+                    <th scope="col" class="align-middle">Artist</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </button>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th scope="col" class="align-middle">2</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                        </button>
+                    </th>
+                    <th scope="col" class="align-middle">Song Title</th>
+                    <th scope="col" class="align-middle">Artist</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col" class="align-middle">3</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                        </button>
+                    </th>
+                    <th scope="col" class="align-middle">Song Title</th>
+                    <th scope="col" class="align-middle">Artist</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                    <th scope="col" class="align-middle">4</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                        </button>
+                    </th>
+                    <th scope="col" class="align-middle">Song Title</th>
+                    <th scope="col" class="align-middle">Artist</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </button>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th scope="col" class="align-middle">5</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                        </button>
+                    </th>
+                    <th scope="col" class="align-middle">Song Title</th>
+                    <th scope="col" class="align-middle">Artist</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Favorite Songs -->
+        <table class="table table-striped-border">
+
+            <thead>
+                <tr>
+                    <div class="topFive" class="col-md-12"><span id = "heartStyle" class="glyphicon glyphicon-heart"></span>Favorites</div>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="col" class="align-middle">1</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-play-circle"></span>
+                        </button>
+                    </th>
+                    <th scope="col" class="align-middle">Song Title</th>
+                    <th scope="col" class="align-middle">Artist</th>
+                    <th scope="col">
+                        <button type="button" class="btn">
+                            <span class="glyphicon glyphicon-heart"></span>
+                        </button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <!-- Code to the JavaScript File -->
+    <script src="javascript/music.js"></script>
+
+</body>
+
+</html>
