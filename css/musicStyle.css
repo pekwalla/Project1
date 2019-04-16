@@ -62,6 +62,11 @@
     color: #04899B;
 }
 
+.playBtn{
+    background-color:white;
+    border:none;
+}
+
 
 /*--------------Search for Songs-------------*/
 
