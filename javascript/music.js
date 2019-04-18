@@ -81,7 +81,7 @@ $('body').on('click', '.selectsong', function () {
     //console.log(this.dataset.song);
     $('#artist').text(this.dataset.artist);
     console.log(this.dataset.songurl);
-    $('#mainsong').attr("onclick", play);
+    $('#mainsong').attr('data-song', this.dataset.songurl);
     var queryurl = 'https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=' + this.dataset.song + '&q_artist=' + this.dataset.artist + '&apikey=97e346e9b545a7dab54fae058f0f85cc';
     $.ajax({
         url: queryurl,
@@ -132,6 +132,9 @@ function playSong(songurl){
     $('#player')[0].play();
 }
 
+$('.playbtn').on('click', function(){
+    playSong(this.dataset.song);
+})
 
 //search using napster api query type track /done
 //display 10 results and user selects one /done
