@@ -33,24 +33,31 @@
         <!-- Search for Songs -->
         <h3>Search for songs</h3>
         <div class="input-group">
-            <input type="text" id='songsearch' class="form-control" placeholder="Search for song name or artist.">
+            <input type="text" id='songsearch' class="form-control" placeholder="Search for song name and/or artist.">
             <span class="input-group-btn">
                 <button id="searchButton" class="btn" style="background-color:#38C790" type="button">Search</button>
             </span>
         </div>
+
+        <!-- Song Results-->
+
+        <div id='results' class='card'>
+        </div>
+
+        <audio id='player' src=''></audio>
 
         <!-- Song Return -->
         <div id="cardStyle" class="card">
             <h5 id='songTitle' class="card-header">Song Title</h5>
             <div class="card-body">
                 <h5 class="card-title"><span id='artist'>Artist</span>
-                    <button type="button" class="playBtn">
+                    <button id='mainsong' type="button" class="normBtn">
                         <span class="glyphicon glyphicon-play-circle"></span>
                     </button>
                 </h5>
                 <div class="card">
                     <div class="card-body">
-                        <div id='description' data-spy="scroll" data-target="#list-example" data-offset="0">
+                        <div id='lyrics' data-spy="scroll" data-target="#list-example" data-offset="0">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, maxime non dolore rem
                             eum nisi magni laborum aliquid quam dolor beatae rerum nam voluptatum accusantium eveniet
                             quaerat cum laudantium facilis.
@@ -73,14 +80,14 @@
                 <tr>
                     <th scope="col" class="align-middle">1</th>
                     <th scope="col">
-                        <button type="button" class="btn play playBtn">
+                        <button type="button" class="btn play normBtn">
                             <span class="glyphicon glyphicon-play-circle"></span>
                         </button>
                     </th>
                     <th scope="col" id='song1' class="align-middle">Song Title</th>
                     <th scope="col" id='artist1' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="btn heart playBtn">
+                        <button type="button" class="btn heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -89,14 +96,14 @@
                 <tr>
                     <th scope="col" class="align-middle">2</th>
                     <th scope="col">
-                        <button type="button" class="btn play playBtn">
+                        <button type="button" class="btn play normBtn">
                             <span class="glyphicon glyphicon-play-circle"></span>
                         </button>
                     </th>
                     <th scope="col" id='song2' class="align-middle">Song Title</th>
                     <th scope="col" id='artist2' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="btn heart playBtn">
+                        <button type="button" class="btn heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -104,14 +111,14 @@
                 <tr>
                     <th scope="col" class="align-middle">3</th>
                     <th scope="col">
-                        <button type="button" class="btn play playBtn">
+                        <button type="button" class="btn play normBtn">
                             <span class="glyphicon glyphicon-play-circle"></span>
                         </button>
                     </th>
                     <th scope="col" id='song3' class="align-middle">Song Title</th>
                     <th scope="col" id='artist3' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="btn heart playBtn">
+                        <button type="button" class="btn heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -119,14 +126,14 @@
                 <tr>
                     <th scope="col" class="align-middle">4</th>
                     <th scope="col">
-                        <button type="button" class="btn play playBtn">
+                        <button type="button" class="btn play normBtn">
                             <span class="glyphicon glyphicon-play-circle"></span>
                         </button>
                     </th>
                     <th scope="col" id='song4' class="align-middle">Song Title</th>
                     <th scope="col" id='artist4' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="btn heart playBtn">
+                        <button type="button" class="btn heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -135,14 +142,14 @@
                 <tr>
                     <th scope="col" class="align-middle">5</th>
                     <th scope="col">
-                        <button type="button" class="btn play playBtn">
+                        <button type="button" class="btn play normBtn">
                             <span class="glyphicon glyphicon-play-circle"></span>
                         </button>
                     </th>
                     <th scope="col" id='song5' class="align-middle">Song Title</th>
                     <th scope="col" id='artist5' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="btn heart playBtn">
+                        <button type="button" class="btn heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
