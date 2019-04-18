@@ -62,7 +62,7 @@
     color: #04899B;
 }
 
-.playBtn{
+.normBtn{
     background-color:white;
     border:none;
 }
@@ -93,6 +93,11 @@ h3{
     background-color: rgb(48, 170, 123);
 }
 
+.selectsong:hover {
+    cursor:pointer;
+    background-color: #38C790;
+
+}
 /*--------------Song Returned-------------*/
 
 .card-header{
