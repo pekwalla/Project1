@@ -13,7 +13,19 @@ $('#searchButton').on('click', function () {
         .then(function (response) {
             console.log(response);
         })
+    })
 
+    var queryurl2 = 'http://eventful.com/performers/events/list?q=music&apikey=ZgqqdrrGpq6N9WrG';
+    
+    $.ajax({
+        url: queryurl2,
+        method: 'GET'
+    })
+        .then(function (response) {
+            console.log(response);
+        })
+   
+    
     /*var searchAlbums = function (query) {
         $.ajax({
             method: 'GET',
@@ -57,18 +69,18 @@ $('#searchButton').on('click', function () {
             throw new Error('bad response')
         }
     });*/
-})
 
 
 
 
-$('.play').on('click', function () {
 
-})
+//$('.play').on('click', function () {
 
-$('.heart').on('click', function () {
+//})
 
-})
+//$('.heart').on('click', function () {
+
+//})
 
 //Search results, limit to 10
 //user chooses the proper track
@@ -76,5 +88,4 @@ $('.heart').on('click', function () {
 //get lyrics using matcher.lyrics.get
 //use chart.artists.get for top 5 artists
 
-
-
+//console.log("the end")
