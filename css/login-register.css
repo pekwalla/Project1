@@ -1,0 +1,165 @@
+/*--------------Jumbotron-------------*/
+
+
+.lead{
+    font-family: "avenir";
+    color:#16A2B8;
+    font-weight: 500;
+}
+
+.jumbotron{
+    background-color: #2A3852;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*--------------Nav Buttons-------------*/
+  
+#login, #logout, #home{
+    background-color: #2A3852;
+    border: #2A3852;
+    padding: 40px 15px 10px 15px;
+    color: #38C790;
+    float: right;
+    font-family: "avenir";
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#home{
+    color: rgb(48, 170, 123);
+    font-weight: 500;
+}
+
+#login:hover{
+    color: rgb(48, 170, 123);
+    font-weight: 500;
+}
+
+#logout:hover{
+    color: rgb(48, 170, 123);
+    font-weight: 500;
+}
+
+/*--------------Form-------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+  
+input{
+    border-radius: 5px;
+    font-family: "avenir";
+}              
+
+
+.row, .column {
+    display: flex;
+}
+  
+.column {
+    flex-direction: column;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    float: center;
+    font-family: "avenir";
+}
+  
+.split {
+    justify-content: space-between;
+}
+  
+.center {
+    justify-content: center;
+    text-align: center;
+}
+  
+.align-center {
+    align-items: center;
+}
+  
+header {
+    padding: 7px 5%;
+    background: #555;
+    color: #fff;
+}
+
+main {
+    padding: 25px 5%;
+}
+  
+form {
+    width: 450px;
+}
+  
+form > * {
+    margin-bottom: 5px;
+    padding: 7px;
+}
+  
+form .toggle p {
+    margin: 0 5px;
+}
+  
+form .toggle-switch {
+    height: 25px;
+    background: #16A2B8;
+    border-radius: 30px;
+    width: 80px;
+    margin-top: 5px; 
+    position: relative;
+    cursor: pointer;
+}
+  
+form .toggle span {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2A3852;
+    transition: left .4s;
+}
+  
+form .toggle span.toggled {
+    left: 56px;
+}
+
+.alignment{
+    text-align: center;
+
+}
+
+/*--------------Submit Button-------------*/
+#submit{
+    background-color: #38C790;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: #2A3852;
+}
+
+#submit:hover{
+    background-color: rgb(48, 170, 123);
+}
+
+h3{
+    width: 100%;
+    background-color: #2A3852;
+    color:#38C790;
+    font-size: 24px;
+    font-family: "avenir";
+    font-weight: 500;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 32px;
+}
+

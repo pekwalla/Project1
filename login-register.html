@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Match</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/login-register.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+
+</head>
+
+<body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <img src="images/greenLogo.png" width=300px alt="Logo">
+            <p class="lead">Search a song title or Artist to find a song and its matching lyrics!</p>
+            
+                <nav>
+
+                    <a id="logout" class="nav-item nav-link">Log Out</a>
+                    <a id="login" class="nav-item nav-link" href="login-register.html">Login/Register</a>
+                    <a id= "Home" class="nav-item nav-link" href="index.html">Home</a>
+                    
+                </nav>
+    
+        </div>
+    </div>
+
+    <div class="container" >
+
+        
+
+        <main class= "center">
+
+            <form class="column" >
+                <h3 class= "center">Sign Up</h3>
+                <input class= "align-center" id="name" type="text" placeholder="Full Name">
+                <input id="email" type="email" placeholder="Your Email Address">
+                <input id="password" type="password" placeholder="Type Your Password">
+                <input id="confirm" type="password" placeholder="Confirm Password">
+                <button id="submit">Submit</button>
+                <div id="toggle-btn" class="row toggle center align-center">
+                    <p>Register</p>
+                    <div class="toggle-switch">
+                        <span></span>
+                    </div>
+                    <p>Login</p>
+                </div>
+            </form>
+        </main>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="javascript/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.0/parsley.min.js"></script>
+    <script>
+
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC7SBvro8h8XEDS9yIyKcQoNjPIh62vX9c",
+            authDomain: "peermach.firebaseapp.com",
+            databaseURL: "https://peermach.firebaseio.com",
+            projectId: "peermach",
+            storageBucket: "peermach.appspot.com",
+            messagingSenderId: "278510133143"
+        };
+        firebase.initializeApp(config);
+        var database = firebase.database();
+    </script>
+    <!--Code for jQueryUI tool tips-->
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+
+    <!-- Code to the JavaScript File -->
+    <script src="javascript/music.js"></script>
+
+</body>
+
+</html>
