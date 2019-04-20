@@ -12,8 +12,10 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
+    
     <link rel="stylesheet" type="text/css" href="css/musicStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    
 
 </head>
 
@@ -26,18 +28,18 @@
             <img src="images/greenLogo.png" width=300px alt="Logo">
             <p class="lead">Search a song title and/or Artist to find a song and its matching lyrics!</p>
         </div>
-    </div>
+    </div>›
 
     <div class="container">
 
         <!-- Search for Songs -->
         <h3>Search for songs</h3>
-        <div class="input-group">
-            <input type="text" id='songsearch' class="form-control" placeholder="Search for song name and/or artist.">
-            <span class="input-group-btn">
-                <button id="searchButton" class="btn" style="background-color:#38C790" type="button">Search</button>
-            </span>
-        </div>
+            <div class="input-group">
+                <input type="text" id='songsearch' class="form-control" title="Enter the song name, and/or artist." placeholder="Search for song name and/or artist.">
+                <span class="input-group-btn">
+                    <button id="searchButton" class="btn" style="background-color:#38C790" type="button" title="Click here to search">Search</button>
+                </span>
+            </div>
 
         <!-- Song Results-->
 
@@ -52,9 +54,9 @@
             <div class="card-body">
                 <h5 class="card-title"><span id='artist'>Artist</span>
                     <button id='mainsong' type="button" class="normBtn play">
-                        <span class="glyphicon glyphicon-play-circle"></span>
+                        <span class="glyphicon glyphicon-play-circle" title="Click here to play a sample of the song"></span>
                     </button>
-                    <button id='mainheart' type="button" class="normBtn heart">
+                    <button id='mainheart' type="button" class="normBtn heart" title="Click here to add this to your favorites">
                         <span class="glyphicon glyphicon-heart"></span>
                     </button>
                 </h5>
@@ -84,13 +86,13 @@
                     <th scope="col" class="align-middle">1</th>
                     <th scope="col">
                         <button type="button" id='songBtn1' class="play normBtn">
-                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="glyphicon glyphicon-play-circle" title="Click here to play a sample of the song"></span>
                         </button>
                     </th>
                     <th scope="col" id='song1' class="align-middle">Song Title</th>
                     <th scope="col" id='artist1' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" id='heartBtn1' class="heart normBtn">
+                        <button type="button" id='heartBtn1' class="heart normBtn" title="Click here to add this to your favorites"> 
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -100,13 +102,13 @@
                     <th scope="col" class="align-middle">2</th>
                     <th scope="col">
                         <button type="button" id='songBtn2' class="play normBtn">
-                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="glyphicon glyphicon-play-circle" title="Click here to play a sample of the song"></span>
                         </button>
                     </th>
                     <th scope="col" id='song2' class="align-middle">Song Title</th>
                     <th scope="col" id='artist2' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" id='heartBtn2' class="heart normBtn">
+                        <button type="button" id='heartBtn2' class="heart normBtn" title="Click here to add this to your favorites">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -115,13 +117,13 @@
                     <th scope="col" class="align-middle">3</th>
                     <th scope="col">
                         <button type="button" id='songBtn3' class="play normBtn">
-                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="glyphicon glyphicon-play-circle" title="Click here to play a sample of the song"></span>
                         </button>
                     </th>
                     <th scope="col" id='song3' class="align-middle">Song Title</th>
                     <th scope="col" id='artist3' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" id='heartBtn3' class="heart normBtn">
+                        <button type="button" id='heartBtn3' class="heart normBtn" title="Click here to add this to your favorites">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -130,13 +132,13 @@
                     <th scope="col" class="align-middle">4</th>
                     <th scope="col">
                         <button type="button" id='songBtn4' class="play normBtn">
-                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="glyphicon glyphicon-play-circle" title="Click here to play a sample of the song"></span>
                         </button>
                     </th>
                     <th scope="col" id='song4' class="align-middle">Song Title</th>
                     <th scope="col" id='artist4' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" id='heartBtn4' class="heart normBtn">
+                        <button type="button" id='heartBtn4' class="heart normBtn" title="Click here to add this to your favorites">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -146,13 +148,13 @@
                     <th scope="col" class="align-middle">5</th>
                     <th scope="col">
                         <button type="button" id='songBtn5' class="play normBtn">
-                            <span class="glyphicon glyphicon-play-circle"></span>
+                            <span class="glyphicon glyphicon-play-circle" title="Click here to play a sample of the song"></span>
                         </button>
                     </th>
                     <th scope="col" id='song5' class="align-middle">Song Title</th>
                     <th scope="col" id='artist5' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" id='heartBtn5' class="heart normBtn">
+                        <button type="button" id='heartBtn5' class="heart normBtn" title="Click here to add this to your favorites">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -193,10 +195,12 @@
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="javascript/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.0/parsley.min.js"></script>
     <script>
         // Initialize Firebase
         var config = {
