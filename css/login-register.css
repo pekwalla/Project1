@@ -14,8 +14,16 @@
 }
 
 /*--------------Nav Buttons-------------*/
-  
-#login, #logout, #home{
+#home{
+    padding: 40px 15px 10px 15px;
+    color: #38C790;
+    float: right;
+    font-family: "avenir";
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#login, #logout{
     background-color: #2A3852;
     border: #2A3852;
     padding: 40px 15px 10px 15px;
@@ -26,7 +34,7 @@
     font-weight: 500;
 }
 
-#home{
+#home:hover{
     color: rgb(48, 170, 123);
     font-weight: 500;
 }

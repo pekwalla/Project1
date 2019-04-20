@@ -27,6 +27,19 @@
     font-size: 16px;
     font-weight: 500;
 }
+#home{
+    padding: 40px 15px 10px 15px;
+    color: #38C790;
+    float: right;
+    font-family: "avenir";
+    font-size: 16px;
+    font-weight: 500;
+}
+#home:hover{
+    color: rgb(48, 170, 123);
+    font-weight: 500;
+}
+
 #login:hover{
     color: rgb(48, 170, 123);
     font-weight: 500;
