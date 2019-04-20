@@ -12,6 +12,29 @@
 .jumbotron{
     background-color: #2A3852;
     text-align: center;
+    padding-bottom: 10px;
+}
+
+/*--------------Nav Buttons-------------*/
+  
+#login, #logout{
+    background-color: #2A3852;
+    border: #2A3852;
+    padding: 40px 15px 10px 15px;
+    color: #38C790;
+    float: right;
+    font-family: "avenir";
+    font-size: 16px;
+    font-weight: 500;
+}
+#login:hover{
+    color: rgb(48, 170, 123);
+    font-weight: 500;
+}
+
+#logout:hover{
+    color: rgb(48, 170, 123);
+    font-weight: 500;
 }
 
 /*--------------Top 5 on the Billboard Table-------------*/
