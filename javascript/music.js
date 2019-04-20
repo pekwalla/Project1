@@ -1,3 +1,231 @@
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCGxTiTRK-90vDJ3NeJxIWJqe_zh717BPM",
+            authDomain: "musicmatch-25934.firebaseapp.com",
+            databaseURL: "https://musicmatch-25934.firebaseio.com",
+            projectId: "musicmatch-25934",
+            storageBucket: "musicmatch-25934.appspot.com",
+            messagingSenderId: "531291450201"
+          };
+          firebase.initializeApp(config);
+          var database = firebase.database();
+
+//Autentication
+
+var db = firebase.database();
+
+var auth = firebase.auth();
+
+var is_register = false;
+
+var uid;
+
+
+
+function showAuthView(logged_in, email) {
+
+  if (logged_in) {
+
+    $('form').hide();
+
+    $('header #login').hide();
+
+    $('header #user-email').text(email);
+
+    $('#logout').show();
+
+  } else {
+
+    $('form').show();
+
+    $('header #login').show();
+
+    $('header #user-email').hide();
+
+    $('#logout').hide();
+
+  }
+
+
+
+
+
+}
+
+
+
+function loginOrRegister(event) {
+
+  event.preventDefault();
+
+  console.log($('#email').val());
+
+
+  var email = $('#email').val().trim();
+
+  var password = $('#password').val().trim();
+
+  var confirm_pass = $('#confirm').val().trim();
+
+  var full_name = $('#name').val().trim();
+
+
+
+
+  // if (password !== confirm_pass) {
+
+  //   return showPasswordConfirmationError();
+
+  // }
+
+
+
+  if (!is_register) {
+      
+
+    auth.createUserWithEmailAndPassword(email, password)
+
+      .then(function (data) {
+
+        db.ref('users').child(data.user.uid).set({
+
+          email: email,
+
+          fullName: full_name,
+
+        })
+
+        window.location = 'index.html';
+      })
+
+      .catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+
+        console.log(errorCode, errorMessage);
+
+
+      })
+
+  } else {
+
+    auth.signInWithEmailAndPassword(email, password)
+
+      .then(function (data) {
+
+        showAuthView(true, data.user.email);
+        window.location = 'index.html';
+
+      })
+
+      .catch(function () {
+
+
+
+      });
+
+  }
+
+}
+
+
+
+function toggleRegisterState() {
+
+  $('.toggle span').toggleClass('toggled');
+
+
+
+  if (is_register) {
+
+    $('form h3').text('Sign Up');
+
+    $('form #confirm').show();
+
+  } else {
+
+    $('form h3').text('Log In');
+
+    $('form #confirm').hide();
+
+  }
+
+
+
+  is_register = !is_register;
+
+}
+
+
+
+function checkAuthState() {
+
+  auth.onAuthStateChanged(function (user) {
+
+    if (user) {
+
+      uid = auth.currentUser.uid;
+
+
+
+      showAuthView(true, user.email);
+
+
+
+      db.ref('/users/' + user.uid).once('value', function (ref) {
+
+        console.log(ref.val());
+
+      })
+
+    } else {
+
+      showAuthView(false, null);
+
+    }
+
+  });
+
+}
+
+
+
+
+
+function logUserOut() {
+
+  auth.signOut().then(function () {
+
+    showAuthView(false, null);
+
+  }).catch(function (error) {
+
+    // An error happened.
+
+  });
+
+}
+
+
+
+function init() {
+
+  $('#submit').on('click', loginOrRegister);
+
+  $('#toggle-btn').on('click', toggleRegisterState);
+
+  $('#logout').on('click', logUserOut);
+
+  checkAuthState();
+
+}
+
+
+
+// Start The App
+
+init();
+
 var search;
 
 $('#searchButton').on('click', function () {
@@ -140,7 +368,12 @@ $('body').on('click', '.selectsong', function () {
 //&#8629 the return character
 // \r\n characters
 
+
+//use data attributes to store song, artist, and preview url in heart
+//heart clicked  push to array and store in firebase
+
 $('.heart').on('click', function () {
+
 
 })
 
@@ -221,6 +454,8 @@ $('.play').on('click', function () {
 
 //can play/pause a track and at the end of the track the glyphicon changes to a repeat sign
 //need to work on username/password and favorite/remove favorite
+
+
 
 
 
