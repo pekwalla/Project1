@@ -24,7 +24,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <img src="images/greenLogo.png" width=300px alt="Logo">
-            <p class="lead">Search a song title or Artist to find a song and its matching lyrics!</p>
+            <p class="lead">Search a song title and/or Artist to find a song and its matching lyrics!</p>
         </div>
     </div>
 
@@ -53,6 +53,9 @@
                 <h5 class="card-title"><span id='artist'>Artist</span>
                     <button id='mainsong' type="button" class="normBtn play">
                         <span class="glyphicon glyphicon-play-circle"></span>
+                    </button>
+                    <button id='mainheart' type="button" class="normBtn heart">
+                        <span class="glyphicon glyphicon-heart"></span>
                     </button>
                 </h5>
                 <div class="card">
@@ -87,7 +90,7 @@
                     <th scope="col" id='song1' class="align-middle">Song Title</th>
                     <th scope="col" id='artist1' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
+                        <button type="button" id='heartBtn1' class="heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -103,7 +106,7 @@
                     <th scope="col" id='song2' class="align-middle">Song Title</th>
                     <th scope="col" id='artist2' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
+                        <button type="button" id='heartBtn2' class="heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -118,7 +121,7 @@
                     <th scope="col" id='song3' class="align-middle">Song Title</th>
                     <th scope="col" id='artist3' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
+                        <button type="button" id='heartBtn3' class="heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -133,7 +136,7 @@
                     <th scope="col" id='song4' class="align-middle">Song Title</th>
                     <th scope="col" id='artist4' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
+                        <button type="button" id='heartBtn4' class="heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -149,7 +152,7 @@
                     <th scope="col" id='song5' class="align-middle">Song Title</th>
                     <th scope="col" id='artist5' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
+                        <button type="button" id='heartBtn5' class="heart normBtn">
                             <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
@@ -197,16 +200,16 @@
     <script>
         // Initialize Firebase
         var config = {
-          apiKey: "AIzaSyC7SBvro8h8XEDS9yIyKcQoNjPIh62vX9c",
-          authDomain: "peermach.firebaseapp.com",
-          databaseURL: "https://peermach.firebaseio.com",
-          projectId: "peermach",
-          storageBucket: "peermach.appspot.com",
-          messagingSenderId: "278510133143"
+            apiKey: "AIzaSyC7SBvro8h8XEDS9yIyKcQoNjPIh62vX9c",
+            authDomain: "peermach.firebaseapp.com",
+            databaseURL: "https://peermach.firebaseio.com",
+            projectId: "peermach",
+            storageBucket: "peermach.appspot.com",
+            messagingSenderId: "278510133143"
         };
         firebase.initializeApp(config);
         var database = firebase.database();
-       </script>
+    </script>
 
     <!-- Code to the JavaScript File -->
     <script src="javascript/music.js"></script>

@@ -21,8 +21,9 @@ $('#searchButton').on('click', function () {
         method: 'GET'
     })
         .then(function (response) {
-            //console.log(response);
+            console.log(response.search.data.tracks[0]);
             $('#results').empty();
+            if(response.search.data.tracks[0]){
             response.search.data.tracks.forEach(function (currentValue) {
 
                 var artist = currentValue.artistName;
@@ -32,6 +33,12 @@ $('#searchButton').on('click', function () {
                 $('#results').append('<div class="selectsong" data-song="' + song + '" data-artist="' + artist + '" data-songurl="' + songurl + '">' + song + ' - ' + artist + ', Album: ' + album + '</div>');
 
             })
+        }else{
+            console.log(response);
+            $('#results').text('Sorry there was an error!'); 
+        }
+        
+            
         }).fail(function (response) {
             if (search == '') {
                 $('#results').text('Please enter a song name and/or artist.');
@@ -97,6 +104,10 @@ $('body').on('click', '.selectsong', function () {
     $('#mainsong').attr('data-song', this.dataset.songurl);
     $('#mainsong span').attr('class', 'glyphicon glyphicon-play-circle');
 
+    $('#mainheart').attr('data-song', this.dataset.song);
+    $('#mainheart').attr('data-artist', this.dataset.artist);
+    $('#mainheart').attr('data-preview', this.dataset.songurl);
+
     if ($('#mainsong').attr('data-playing') == 'true') {
         $('#mainsong').attr('data-playing', 'false');
         changeSong(this.dataset.songurl);
@@ -149,6 +160,10 @@ $.ajax({
 
         $('#songBtn' + (index + 1)).attr('data-song', preview);
 
+        $('#heartBtn' + (index+1)).attr('data-song', song); //different from songBtn's data-song
+        $('#heartBtn' + (index+1)).attr('data-artist', artist);
+        $('#heartBtn' + (index+1)).attr('data-preview', preview);
+
     });
 })
 
@@ -196,11 +211,30 @@ $('.play').on('click', function () {
 
 });
 
+
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+  
+
 //search using napster api query type track /done
 //display 10 results and user selects one /done
 //use musicxmatch matcher.lyrics.get to get the lyrics /done
 // use mxm chart.artists.get to get the top 5 songs -> use napster because napster also provides a previewURL
 //save username, password, and favorites to firebase
+
+//can play/pause a track and at the end of the track the glyphicon changes to a repeat sign
+//need to work on username/password and favorite/remove favorite
 
 
 
