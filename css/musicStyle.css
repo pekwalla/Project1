@@ -35,6 +35,7 @@
 #logout:hover{
     color: rgb(48, 170, 123);
     font-weight: 500;
+    cursor:pointer;
 }
 
 /*--------------Top 5 on the Billboard Table-------------*/

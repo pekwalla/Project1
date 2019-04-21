@@ -27,9 +27,9 @@
         <div class="container">
             <img src="images/greenLogo.png" width=300px alt="Logo">
             <p class="lead">Search a song title or Artist to find a song and its matching lyrics!</p>
-            <nav>
-                <a id="logout" class="nav-item nav-link">Log Out</a>
-                <a id="login" class="nav-item nav-link" href="login-register.html">Login/Register</a>
+            <nav style='height:80px'>
+                <a id="logout" style='display:none' class="nav-item nav-link">Log Out</a>
+                <a id="login" style='display:none' class="nav-item nav-link" href="login-register.html">Login/Register</a>
                 
             </nav>
         
@@ -69,9 +69,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div id='lyrics' data-spy="scroll" data-target="#list-example" data-offset="0">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, maxime non dolore rem
-                            eum nisi magni laborum aliquid quam dolor beatae rerum nam voluptatum accusantium eveniet
-                            quaerat cum laudantium facilis.
+                            Search a song for its lyrics!
                         </div>
                     </div>
                 </div>
@@ -87,7 +85,7 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody id='top5'>
                 <tr>
                     <th scope="col" class="align-middle">1</th>
                     <th scope="col">
@@ -178,7 +176,7 @@
                 </tr>
             </thead>
 
-            <tbody id='favorites'>
+            <tbody id='favorites'> <!-- when i put text here it isnt in the tbody for some reason-->
                 <!--     <tr>
                     <th scope="col" class="align-middle">1</th>
                     <th scope="col">

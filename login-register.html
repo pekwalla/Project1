@@ -29,11 +29,9 @@
             <img src="images/greenLogo.png" width=300px alt="Logo">
             <p class="lead">Search a song title or Artist to find a song and its matching lyrics!</p>
             
-                <nav>
-
-                    <a id="logout" class="nav-item nav-link">Log Out</a>
-                    <a id="login" class="nav-item nav-link" href="login-register.html">Login/Register</a>
-                    <a id= "Home" class="nav-item nav-link" href="index.html">Home</a>
+                <nav style='height:80px'>
+                    
+                    <a id= "home" class="nav-item nav-link" href="index.html">Home</a>
                     
                 </nav>
     
@@ -47,18 +45,17 @@
         <main class= "center">
 
             <form class="column" >
-                <h3 class= "center">Sign Up</h3>
-                <input class= "align-center" id="name" type="text" placeholder="Full Name">
+                <h3 class= "center">Login</h3>
                 <input id="email" type="email" placeholder="Your Email Address">
-                <input id="password" type="password" placeholder="Your password must be at least 6 characters">
-                <input id="confirm" type="password" placeholder="Confirm Password">
+                <input id="password" type="password" placeholder="Enter Password">
+                <input id="confirm" style='display:none' type="password" placeholder="Confirm Password | Must be at least 6 characters">
                 <button id="submit">Submit</button>
                 <div id="toggle-btn" class="row toggle center align-center">
-                    <p>Register</p>
+                    <p>Login</p>
                     <div class="toggle-switch">
                         <span></span>
                     </div>
-                    <p>Login</p>
+                    <p>Register</p>
                 </div>
             </form>
         </main>
