@@ -403,7 +403,7 @@ $('.heart').on('click', function () {
     //console.log(song);
     console.log(snapshot.val());
     snapshot.forEach(function (childsnapshot) {
-      //console.log(childsnapshot.val().song);
+      console.log(childsnapshot.val().song);
       if (song == childsnapshot.val().song) {
         added = true;
         console.log(added);
@@ -428,13 +428,16 @@ $('.heart').on('click', function () {
 
 $('body').on('click', '.remove', function () {
   db.ref('users').child(uid).child('favorites').child(this.dataset.key).remove();
-  var top5isplaying = false;
+  var top6isplaying = false;
   $('#top5 button').each(function () {
     if ($(this).attr('class').indexOf("playing") > -1) {
-      top5isplaying = true;
+      top6isplaying = true;
     }
   });
-  if (top5isplaying == false) {
+  if($('#mainsong').attr('class').indexOf('playing') > -1){
+    top6isplaying = true;
+  }
+  if (top6isplaying == false) {
     $('#player')[0].pause();
   }
 })
