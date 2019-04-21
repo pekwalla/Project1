@@ -27,10 +27,10 @@
         <div class="container">
             <img src="images/greenLogo.png" width=300px alt="Logo">
             <p class="lead">Search a song title or Artist to find a song and its matching lyrics!</p>
-            <nav>
-                <button id="login">Login/Register</button>
-                <span id="user-email"></span>
-                <button id="logout">Log Out</button>
+            <nav style='height:80px'>
+                <a id="logout" style='display:none' class="nav-item nav-link">Log Out</a>
+                <a id="login" style='display:none' class="nav-item nav-link" href="login-register.html">Login/Register</a>
+                
             </nav>
         
         </div>
@@ -62,13 +62,14 @@
                     <button id='mainsong' type="button" class="normBtn play">
                         <span class="glyphicon glyphicon-play-circle" title="Click here to play a sample of the song"></span>
                     </button>
+                    <button id='mainheart' type="button" class="normBtn heart" title="Click here to add this to your favorites">
+                        <span class="glyphicon glyphicon-heart"></span>
+                    </button>
                 </h5>
                 <div class="card">
                     <div class="card-body">
                         <div id='lyrics' data-spy="scroll" data-target="#list-example" data-offset="0">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, maxime non dolore rem
-                            eum nisi magni laborum aliquid quam dolor beatae rerum nam voluptatum accusantium eveniet
-                            quaerat cum laudantium facilis.
+                            Search a song for its lyrics!
                         </div>
                     </div>
                 </div>
@@ -84,7 +85,7 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody id='top5'>
                 <tr>
                     <th scope="col" class="align-middle">1</th>
                     <th scope="col">
@@ -95,8 +96,8 @@
                     <th scope="col" id='song1' class="align-middle">Song Title</th>
                     <th scope="col" id='artist1' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
-                            <span class="glyphicon glyphicon-heart" title="Click here to add this to your favorites"></span>
+                        <button type="button" id='heartBtn1' class="heart normBtn" title="Click here to add this to your favorites"> 
+                            <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
                 </tr>
@@ -111,8 +112,8 @@
                     <th scope="col" id='song2' class="align-middle">Song Title</th>
                     <th scope="col" id='artist2' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
-                            <span class="glyphicon glyphicon-heart" title="Click here to add this to your favorites"></span>
+                        <button type="button" id='heartBtn2' class="heart normBtn" title="Click here to add this to your favorites">
+                            <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
                 </tr>
@@ -126,8 +127,8 @@
                     <th scope="col" id='song3' class="align-middle">Song Title</th>
                     <th scope="col" id='artist3' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
-                            <span class="glyphicon glyphicon-heart" title="Click here to add this to your favorites"></span>
+                        <button type="button" id='heartBtn3' class="heart normBtn" title="Click here to add this to your favorites">
+                            <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
                 </tr>
@@ -141,8 +142,8 @@
                     <th scope="col" id='song4' class="align-middle">Song Title</th>
                     <th scope="col" id='artist4' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
-                            <span class="glyphicon glyphicon-heart" title="Click here to add this to your favorites"></span>
+                        <button type="button" id='heartBtn4' class="heart normBtn" title="Click here to add this to your favorites">
+                            <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
                 </tr>
@@ -157,8 +158,8 @@
                     <th scope="col" id='song5' class="align-middle">Song Title</th>
                     <th scope="col" id='artist5' class="align-middle">Artist</th>
                     <th scope="col">
-                        <button type="button" class="heart normBtn">
-                            <span class="glyphicon glyphicon-heart" title="Click here to add this to your favorites"></span>
+                        <button type="button" id='heartBtn5' class="heart normBtn" title="Click here to add this to your favorites">
+                            <span class="glyphicon glyphicon-heart"></span>
                         </button>
                     </th>
                 </tr>
@@ -175,7 +176,7 @@
                 </tr>
             </thead>
 
-            <tbody id='favorites'>
+            <tbody id='favorites'> <!-- when i put text here it isnt in the tbody for some reason-->
                 <!--     <tr>
                     <th scope="col" class="align-middle">1</th>
                     <th scope="col">
@@ -203,26 +204,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.0/parsley.min.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyC7SBvro8h8XEDS9yIyKcQoNjPIh62vX9c",
-          authDomain: "peermach.firebaseapp.com",
-          databaseURL: "https://peermach.firebaseio.com",
-          projectId: "peermach",
-          storageBucket: "peermach.appspot.com",
-          messagingSenderId: "278510133143"
-        };
-        firebase.initializeApp(config);
-        var database = firebase.database();
-    </script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.0/parsley.min.js"></script>-->
+
     <!--Code for jQueryUI tool tips-->
-    <script>
-        $( function() {
-        $( document ).tooltip();
-        } );
-    </script>
+
 
     <!-- Code to the JavaScript File -->
     <script src="javascript/music.js"></script>
